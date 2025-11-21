@@ -1,0 +1,64 @@
+
+@font-face {
+    font-family: 'Baby';
+    src: url('/src/public/assets/font/Baby.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Aplicando a fonte */
+body {
+    font-family: 'MinhaFonte', sans-serif;
+}
+
+:root{
+    /* mainColors */
+    --primaryColor: #e9f5ff;
+    --primaryDarkColor: #ABC8E2;
+    --secondaryColor: #ffede0;
+    --secondaryDarkColor: #ffcdaa;
+    --tertiaryColor: #818586;
+    --tertiaryDarkColor: #696D6E;
+
+    /* textColors */
+    --mainTextColor: var(--tertiaryDarkColor);
+    --mainTextColorDark: #ffffff;
+
+
+    /* neutralColors */
+    --whiteColor: #ffffff;
+    --blackColor: #000000;
+    --grayColor: #5d5d5d;
+}
+
+
+body{
+    background-color: var(--primaryColor);
+    font-family: Baby;
+}
+
+.header{
+    position: fixed;
+}
+.bg-header{
+    margin-top: -2%;
+    width: 100%;
+}
+
+.navbar{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    margin-top: -23%;
+    gap: 2%;
+}
+.navbar > a{
+    text-decoration: none;
+    font-size: 50px;
+    color: var(--mainTextColor);
+    
+
+}
+.navbar>a:hover{
+    color: var(--secondaryDarkColor);
+}
