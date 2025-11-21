@@ -44,13 +44,29 @@ body{
     margin-top: -2%;
     width: 100%;
 }
+.navContent{
+    display: flex;
+    flex-direction: row;
+    margin-top: -23%;
+    margin-left: 10%;
+    margin-right: 10%;
+    justify-content: space-between;
 
+    
+    
+}
+.navContent>img{
+    width: 13%;
+    margin-top: -2%;
+    cursor: pointer;
+    
+}
 .navbar{
     display: flex;
     position: relative;
     justify-content: center;
-    margin-top: -23%;
-    gap: 2%;
+    gap: 30%;
+
 }
 .navbar > a{
     text-decoration: none;
