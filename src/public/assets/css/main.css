@@ -79,6 +79,10 @@ body{
     color: var(--secondaryDarkColor);
 }
 
+#cards-container{
+    margin-top: 20%;
+}
+
 /* Estilo Geral do Card */
 .card-artwork {
     /* Fundo e borda base */
