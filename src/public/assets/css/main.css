@@ -1,4 +1,3 @@
-
 @font-face {
     font-family: 'Baby';
     src: url('/src/public/assets/font/Baby.otf') format('opentype');
@@ -6,13 +5,16 @@
     font-style: normal;
 }
 
-/* Aplicando a fonte */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: 'MinhaFonte', sans-serif;
 }
 
 :root{
-    /* mainColors */
     --primaryColor: #e9f5ff;
     --primaryDarkColor: #ABC8E2;
     --secondaryColor: #ffede0;
@@ -20,30 +22,41 @@ body {
     --tertiaryColor: #818586;
     --tertiaryDarkColor: #696D6E;
 
-    /* textColors */
     --mainTextColor: var(--tertiaryDarkColor);
     --mainTextColorDark: #ffffff;
 
-
-    /* neutralColors */
     --whiteColor: #ffffff;
     --blackColor: #000000;
     --grayColor: #5d5d5d;
+    
+    --funYellow: #FFD700;
+    --funPink: #FF69B4;
+    --funPurple: #8A2BE2;
+    --funOrange: #FF8C00;
+    --funGreen: #3CB371;
 }
 
 
 body{
     background-color: var(--primaryColor);
     font-family: Baby;
+    width: 100%;
+    overflow-x: hidden;
 }
 
-.header{
+.header {
     position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    z-index: 1000; 
+ 
 }
 .bg-header{
     margin-top: -2%;
     width: 100%;
 }
+
 .navContent{
     display: flex;
     flex-direction: row;
@@ -51,9 +64,6 @@ body{
     margin-left: 10%;
     margin-right: 10%;
     justify-content: space-between;
-
-    
-    
 }
 .navContent>img{
     width: 13%;
@@ -79,96 +89,39 @@ body{
     color: var(--secondaryDarkColor);
 }
 
-#cards-container{
-    margin-top: 20%;
+
+.main-container{
+    width: 100%;
 }
 
-/* Estilo Geral do Card */
+
+#cards-container{
+    margin-top: 20%;
+    justify-self: center;
+}
 .card-artwork {
-    /* Fundo e borda base */
-    border: 2px solid var(--funYellow); /* Borda amarela divertida */
-    border-radius: 18px; /* Cantos arredondados */
-    padding: 15px;
-    margin: 15px;
+    border-radius: 18px;
+    padding: 10px;
+    margin: 10px;
     text-align: center;
-    
-    /* Fundo pastel claro */
     background-color: var(--secondaryColor); 
-    
-    /* Sombra suave e flutuante */
-    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.15); 
-    
-    /* Configuração de layout */
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
     max-width: 260px; 
     display: inline-block;
     vertical-align: top;
-    
-    /* Fonte infantil */
-    font-family: 'Comic Sans MS', 'Sniglet', cursive, sans-serif;
     color: var(--mainTextColor);
     transition: transform 0.3s ease-in-out;
 }
 
 .card-artwork:hover {
-    transform: translateY(-5px); /* Efeito "saltitante" ao passar o mouse */
-    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilo da Imagem */
 .card-artwork-image {
     width: 100%;
-    height: 190px;
+    height: 300px;
     object-fit: cover;
     border-radius: 12px;
     
-    /* Borda alegre na imagem */
-    border: 4px solid var(--funPink); 
-    margin-bottom: 12px;
-}
-
-/* Estilo do Nome da Arte */
-.card-artwork-name {
-    color: var(--funPurple); /* Roxo vibrante */
-    font-size: 1.5em;
-    margin-bottom: 5px;
-    font-weight: 700;
-}
-
-/* Estilo da Descrição */
-.card-artwork-desc {
-    color: var(--tertiaryDarkColor);
-    font-size: 0.95em;
-    margin-bottom: 10px;
-    min-height: 40px; 
-}
-
-/* Estilo do Preço */
-.card-artwork-price {
-    color: var(--funOrange); /* Laranja forte de destaque */
-    font-size: 1.4em;
-    font-weight: bold;
-    margin-bottom: 15px;
-}
-
-/* Estilo do Botão */
-.card-artwork-button {
-    background-color: var(--funGreen); /* Verde divertido */
-    color: var(--whiteColor);
-    border: none;
-    border-radius: 25px; /* Botão super arredondado */
-    padding: 12px 25px;
-    font-size: 1.1em;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.1s ease;
-    box-shadow: 0 4px 0 var(--funYellow); /* Efeito de botão "pressionável" */
-}
-
-.card-artwork-button:hover {
-    background-color: #228B22; /* Verde um pouco mais escuro no hover */
-}
-
-.card-artwork-button:active {
-    transform: translateY(4px); /* Pressiona o botão para baixo */
-    box-shadow: 0 0 0 var(--funYellow); /* Remove a sombra ao ser pressionado */
 }

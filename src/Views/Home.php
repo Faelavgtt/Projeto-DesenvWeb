@@ -22,7 +22,7 @@
         
     </header>
     <main>
-        <div class="">
+        <div class="main-container">
             <div id="cards-container"></div>
         </div>
 
