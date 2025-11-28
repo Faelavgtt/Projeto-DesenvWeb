@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../public/assets/img/logoMagicArt.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../public/assets/css/main.css">
+    <link rel="stylesheet" href="../public/assets/css/style.css">
+    <title>MagicArt</title>
+</head>
+<body>
+    <header class="header">
+        <img src="../public/assets/img/headerNuvem.png" alt="" class="bg-header">
+        <div class="navContent">
+            <img src="../public/assets/img/LogoMagicArt.svg" alt="">
+            <nav class="navbar">
+            <a href="">Home</a>
+            <a href="">About</a>
+            <a href="">ArtWork</a>
+        </nav>
+        </div>
+        
+    </header>
+    <main>
+        <div class="main-container">
+            <div id="cards-container"></div>
+        </div>
+
+    </main>
+    <footer>
+
+    </footer>
+    <script type="module" src="/src/public/assets/js/script.js"></script>
+</body>
+</html>
