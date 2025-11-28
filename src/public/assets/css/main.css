@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 @font-face {
     font-family: 'Baby';
     src: url('/src/public/assets/font/Baby.otf') format('opentype');
@@ -124,4 +126,126 @@ body{
     object-fit: cover;
     border-radius: 12px;
     
+}
+
+#about-section {
+    width: 80%;
+    padding: 5% 10%;
+    margin-top: 2%;
+}
+
+.about-container {
+    background-color: var(--secondaryColor);
+    border-radius: 20px;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+.about-image img {
+    width: 320px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+.about-text h2 {
+    font-size: 60px;
+    color: var(--mainTextColor);
+    margin-top: 0;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.about-text p {
+    font-size: 20px;
+    font-family: "Poppins";
+    line-height: 1.4;
+    
+    color: var(--mainTextColor);
+    margin-bottom: 15px;
+}
+#footer {
+    margin-top: 10%;
+    background-color: var(--secondaryColor);
+    padding: 60px 10% 30px 10%;
+    border-radius: 25px 25px 0 0;
+    box-shadow: 0px -2px 8px rgba(0,0,0,0.1);
+    color: var(--mainTextColor);
+    font-family: Baby;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 60px;
+}
+
+.footer-logo {
+    max-width: 300px;
+}
+
+.footer-logo img {
+    width: 120px;
+    margin-bottom: 10px;
+}
+
+.footer-logo p {
+    font-size: 12px;
+    line-height: 1.4;
+    font-family: "Poppins";
+    width: 50%;
+
+
+}
+.footer-logo p > span{
+    font-weight: 800;
+}
+
+.footer-links,
+.footer-social {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.footer-links h3,
+.footer-social h3 {
+    font-size: 35px;
+    margin-bottom: 10px;
+    color: var(--mainTextColor);
+    letter-spacing: 2px;
+}
+
+.footer-links a,
+.footer-social a {
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--mainTextColor);
+    margin: 5px 0;
+    transition: 0.2s;
+    font-family: "Poppins";
+}
+
+.footer-links a:hover,
+.footer-social a:hover {
+    color: var(--secondaryDarkColor);
+}
+
+.footer-bottom {
+    margin-top: 40px;
+    text-align: center;
+    font-family: "Poppins";
+
+}
+
+.footer-bottom p {
+    font-size: 10px;
+    opacity: 0.8;
 }
