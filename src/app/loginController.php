@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                 $_SESSION['loggedin'] = true;
                 $_SESSION['email'] = $email;
-                $_SESSION['nome'] = $usuario['nome'];
+
 
                 header("Location: /Projeto-DesenvWeb/dashboard");
                 exit;
