@@ -8,11 +8,9 @@ require_once(ROOT_PATH . '/src/app/conexao.php');
 
 $sql = "SELECT id, nome, preco FROM produtos ORDER BY id DESC LIMIT 4";
 $stmt = $pdo->query($sql);
-
-// 2. Executa a consulta e pega todos os resultados
 $produtos_recentes = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-// Define um status padrão (você pode precisar de uma coluna 'status' no BD real para ser preciso)
+
 function getStatusBadge($id) {
     if ($id % 3 == 0) return ['label' => 'Vendido', 'class' => 'status-sold'];
     if ($id % 2 == 0) return ['label' => 'Pendente', 'class' => 'status-pending'];
@@ -60,7 +58,7 @@ function getStatusBadge($id) {
             </thead>
             <tbody>
                 <?php 
-                // 3. Loop para exibir os dados
+                
                 foreach ($produtos_recentes as $produto): 
                     $status = getStatusBadge($produto['id']);
                 ?>
