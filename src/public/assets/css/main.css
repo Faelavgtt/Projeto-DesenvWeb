@@ -113,6 +113,8 @@ body{
     vertical-align: top;
     color: var(--mainTextColor);
     transition: transform 0.3s ease-in-out;
+    font-family: "Poppins";
+
 }
 
 .card-artwork:hover {

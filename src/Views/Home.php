@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../public/assets/img/logoMagicArt.svg" type="image/x-icon">
-    <link rel="stylesheet" href="../public/assets/css/main.css">
+    <link rel="shortcut icon" href="/Projeto-DesenvWeb/src/public/assets/img/logoMagicArt.svg" type="image/x-icon">
+    <link rel="stylesheet" href="/Projeto-DesenvWeb/src/public/assets/css/main.css">
     <title>MagicArt</title>
 </head>
 <body>
     <header class="header">
-        <img src="../public/assets/img/headerNuvem.png" alt="" class="bg-header">
+        <img src="/Projeto-DesenvWeb/src/public/assets/img/headerNuvem.png" alt="" class="bg-header">
         <div class="navContent">
-            <img src="../public/assets/img/LogoMagicArt.svg" alt="">
+            <img src="/Projeto-DesenvWeb/src/public/assets/img/LogoMagicArt.svg" alt="">
             <nav class="navbar">
             <a href="">Home</a>
             <a href="#about-section">About</a>
@@ -52,7 +52,7 @@
     <div class="footer-container">
 
         <div class="footer-logo">
-            <img src="../public/assets/img/LogoMagicArt.svg" alt="MagicArt Logo">
+            <img src="/Projeto-DesenvWeb/src/public/assets/img/LogoMagicArt.svg" alt="MagicArt Logo">
             <p>Transformando desenhos infantis em <span>arte cheia de magia.</span></p>
         </div>
 

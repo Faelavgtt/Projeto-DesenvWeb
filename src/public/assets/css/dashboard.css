@@ -1,0 +1,162 @@
+@import url(./main.css);
+.dashboard-body {
+    display: flex;
+    min-height: 100vh;
+    margin: 0;
+    background-color: var(--primaryColor);
+    font-family: 'Poppins', sans-serif;
+    color: var(--mainTextColor);
+}
+
+/* --- SIDEBAR --- */
+.sidebar {
+    width: 250px;
+    background-color: var(--secondaryColor);
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    height: 100%;
+}
+
+.sidebar h2 {
+    font-family: 'Baby', cursive;
+    font-size: 40px;
+    color: var(--secondaryDarkColor);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li a {
+    display: block;
+    padding: 15px 10px;
+    text-decoration: none;
+    color: var(--tertiaryDarkColor);
+    font-weight: 500;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar ul li a i {
+    margin-right: 10px;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+    background-color: var(--primaryDarkColor);
+    color: var(--whiteColor);
+}
+
+.main-content {
+    margin-left: 290px; 
+    padding: 40px;
+    flex-grow: 1;
+}
+
+.main-content h1 {
+    font-family: 'Baby', cursive;
+    font-size: 60px;
+    color: var(--mainTextColor);
+    margin-bottom: 30px;
+}
+
+
+.stats-cards {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.card {
+    flex: 1;
+    background-color: var(--secondaryColor);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.card .icon {
+    font-size: 30px;
+    color: var(--funPurple);
+    margin-bottom: 10px;
+}
+
+.card .number {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--secondaryDarkColor);
+}
+
+.card .label {
+    font-size: 14px;
+    color: var(--tertiaryColor);
+    margin-top: 5px;
+}
+
+
+.products-table-container {
+    background-color: var(--whiteColor);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    margin-top: 40px;
+}
+
+.products-table-container h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    color: var(--mainTextColor);
+    margin-bottom: 20px;
+}
+
+.products-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+}
+
+.products-table th,
+.products-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid var(--primaryDarkColor);
+}
+
+.products-table th {
+    background-color: var(--primaryColor);
+    color: var(--tertiaryDarkColor);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.products-table tbody tr:hover {
+    background-color: var(--secondaryColor);
+}
+
+/* Estilos dos Badges de Status */
+.status-badge {
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--whiteColor);
+    display: inline-block;
+}
+
+.status-active {
+    background-color: var(--funGreen); /* Verde para Ativo */
+}
+.status-sold {
+    background-color: var(--funPink); /* Rosa/Vermelho para Vendido */
+}
+.status-pending {
+    background-color: var(--funYellow); /* Amarelo para Pendente */
+}
+

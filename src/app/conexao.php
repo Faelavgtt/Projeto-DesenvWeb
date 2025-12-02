@@ -1,19 +1,18 @@
 <?php
 
-$servidor = "localhost"; 
-$usuario = "root"; 
-$senha = "";
-$banco_de_dados = "magicart";
+$host = "localhost";      
+$dbname = "magicart";     
+$user = "root";          
+$pass = "";               
 
-$conn = new mysqli($servidor, $usuario, $senha, $banco_de_dados);
+try {
+    $pdo = new PDO(
+        "mysql:host=$host;dbname=$dbname;charset=utf8mb4",
+        $user,
+        $pass
+    );
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-
-if ($conn->connect_error) {
-   
-    die("A conexão falhou: " . $conn->connect_error);
+} catch (PDOException $e) {
+    die("Erro na conexão: " . $e->getMessage());
 }
-
-
-echo "Conexão bem-sucedida!";
-
-?>

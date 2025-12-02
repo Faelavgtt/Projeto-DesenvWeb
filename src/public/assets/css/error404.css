@@ -1,0 +1,77 @@
+@import url(./main.css);
+.error-body {
+    background-color: var(--primaryColor);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 20px;
+}
+
+.error-container {
+    background-color: var(--secondaryColor);
+    padding: 60px 80px;
+    border-radius: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+}
+
+.error-code {
+    font-family: 'Baby', cursive; 
+    font-size: 150px;
+    color: var(--secondaryDarkColor); 
+    margin: 0;
+    line-height: 1;
+}
+
+.error-message {
+    font-family: 'Baby', cursive;
+    font-size: 50px;
+    color: var(--mainTextColor);
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.error-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    color: var(--tertiaryColor);
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.action-link {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: var(--secondaryDarkColor); 
+    color: var(--whiteColor);
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 15px;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.action-link:hover {
+    background-color: var(--funOrange); 
+    transform: translateY(-2px);
+}
+
+.nav-links {
+    margin-top: 20px;
+}
+
+.nav-links a {
+    color: var(--tertiaryColor);
+    text-decoration: none;
+    margin: 0 15px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+}
+
+.nav-links a:hover {
+    color: var(--secondaryDarkColor);
+}

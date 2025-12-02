@@ -1,0 +1,96 @@
+@import url(./main.css);
+.login-body {
+            /* Usa as mesmas cores de fundo e fonte do seu CSS principal */
+            background-color: var(--primaryColor);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Poppins', sans-serif; /* Poppins para o corpo principal */
+        }
+        
+        .login-container {
+            background-color: var(--secondaryColor);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .login-container h2 {
+            font-family: 'Baby', cursive; /* Fonte do seu CSS principal */
+            font-size: 60px;
+            color: var(--mainTextColor);
+            margin-bottom: 30px;
+            letter-spacing: 2px;
+        }
+
+        .input-group {
+            margin-bottom: 25px;
+            text-align: left;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 18px;
+            color: var(--tertiaryDarkColor);
+            font-weight: 500;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid var(--primaryDarkColor);
+            border-radius: 10px;
+            font-size: 16px;
+            background-color: var(--whiteColor);
+            box-sizing: border-box;
+            color: var(--mainTextColor);
+            transition: border-color 0.3s;
+        }
+
+        .input-group input:focus {
+            outline: none;
+            border-color: var(--secondaryDarkColor); /* Mudar a cor no foco */
+            box-shadow: 0 0 5px rgba(255, 205, 170, 0.5);
+        }
+
+        .login-button {
+            width: 100%;
+            padding: 15px;
+            background-color: var(--secondaryDarkColor); /* Botão com cor de destaque */
+            color: var(--whiteColor);
+            font-family: 'Poppins', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.1s;
+            margin-top: 10px;
+        }
+
+        .login-button:hover {
+            background-color: var(--funOrange); /* Cor mais divertida no hover */
+            transform: translateY(-2px);
+        }
+
+        .login-links {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .login-links a {
+            color: var(--tertiaryColor);
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        .login-links a:hover {
+            color: var(--secondaryDarkColor);
+        }
