@@ -1,113 +1,48 @@
-/*
-  Este CSS deve ser aplicado após o seu CSS principal
-  que define as variáveis de cor (:root) e as fontes.
-*/
+.main-content {
+    padding: 40px;
+}
 
-/* --- Estilos Gerais da Página --- */
+.form-container {
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    width: 500px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
 
-body {
-    background-color: var(--primaryColor);
-    font-family: 'Poppins', sans-serif;
-    color: var(--mainTextColor);
+.form-group {
+    margin-bottom: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 40px 20px;
-    min-height: 100vh;
 }
 
-h1 {
-    font-family: 'Baby', cursive;
-    font-size: 60px;
-    color: var(--mainTextColor);
-    margin-bottom: 30px;
-    text-align: center;
-    letter-spacing: 2px;
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 6px;
 }
 
-/* --- Container e Formulário --- */
-
-form {
-    background-color: var(--secondaryColor);
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 500px;
+.form-group input,
+.form-group textarea {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
 }
 
-label {
-    display: block;
-    margin-bottom: 8px;
-    font-size: 18px;
-    color: var(--tertiaryDarkColor);
-    font-weight: 600;
-}
-
-input[type="text"],
-input[type="number"],
-input[type="file"],
-textarea {
+.btn-cadastrar {
     width: 100%;
     padding: 12px;
-    margin-bottom: 20px;
-    border: 2px solid var(--primaryDarkColor);
-    border-radius: 10px;
-    font-size: 16px;
-    background-color: var(--whiteColor);
-    box-sizing: border-box;
-    color: var(--mainTextColor);
-    transition: border-color 0.3s, box-shadow 0.3s;
-}
-
-textarea {
-    resize: vertical;
-    min-height: 100px;
-}
-
-/* Efeito de Foco */
-input:focus,
-textarea:focus {
-    outline: none;
-    border-color: var(--secondaryDarkColor);
-    box-shadow: 0 0 8px rgba(255, 205, 170, 0.6);
-}
-
-/* Estilo do Botão Salvar */
-button[type="submit"] {
-    width: 100%;
-    padding: 15px;
-    background-color: var(--secondaryDarkColor);
-    color: var(--whiteColor);
-    font-family: 'Poppins', sans-serif;
-    font-size: 20px;
-    font-weight: 700;
+    background: #3498db;
+    color: #fff;
     border: none;
-    border-radius: 15px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.1s;
-    margin-top: 10px;
-}
-
-button[type="submit"]:hover {
-    background-color: var(--funOrange); 
-    transform: translateY(-2px);
-}
-
-/* Estilo do Link Voltar */
-a {
-    display: inline-block;
-    margin-top: 25px;
-    font-size: 16px;
-    color: var(--tertiaryColor);
-    text-decoration: none;
-    font-weight: 500;
-    padding: 5px 10px;
     border-radius: 8px;
-    transition: color 0.3s, background-color 0.3s;
+    cursor: pointer;
 }
 
-a:hover {
-    color: var(--secondaryDarkColor);
-    background-color: var(--primaryDarkColor);
+.mensagem-alerta {
+    padding: 10px;
+    background: #c8e6c9;
+    border-left: 5px solid #2e7d32;
+    color: #2e7d32;
+    width: 300px;
+    margin-bottom: 20px;
 }

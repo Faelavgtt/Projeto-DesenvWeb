@@ -1,43 +1,37 @@
 <?php
-require_once ROOT_PATH . "/src/app/conexao.php";
+
+require_once __DIR__ . "/conexao.php";
 
 function salvarProduto() {
     global $pdo;
 
-    $uploadDir = ROOT_PATH . "/src/public/uploads/";
-
-    if (!is_dir($uploadDir)) {
-        mkdir($uploadDir, 0777, true);
+    if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+        echo "Método não permitido!";
+        exit;
     }
 
- 
-    if (!empty($_FILES['imagem']['name'])) {
-        $nomeArquivo = time() . "_" . basename($_FILES['imagem']['name']);
-        $caminhoCompleto = $uploadDir . $nomeArquivo;
+    $nome = $_POST['nome'] ?? '';
+    $preco = $_POST['preco'] ?? 0;
+    $descricao = $_POST['descricao'] ?? '';
+    $image_url = $_POST['image_url'] ?? '';
 
-        if (move_uploaded_file($_FILES['imagem']['tmp_name'], $caminhoCompleto)) {
-            $image_url = "/Projeto-DesenvWeb/src/public/uploads/" . $nomeArquivo;
-        } else {
-            die("Erro ao fazer upload da imagem.");
-        }
+    try {
+        $sql = "INSERT INTO produtos (image_url, nome, preco, descricao)
+                VALUES (:img, :nome, :preco, :desc)";
+
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindValue(':img', $image_url);
+        $stmt->bindValue(':nome', $nome);
+        $stmt->bindValue(':preco', $preco);
+        $stmt->bindValue(':desc', $descricao);
+
+        $stmt->execute();
+
+        header("Location: /Projeto-DesenvWeb/produtos/cadastrar?sucesso=1");
+        exit;
+
+    } catch (Exception $e) {
+        echo "Erro ao salvar o produto: " . $e->getMessage();
+        exit;
     }
-
-    $nome = $_POST['nome'];
-    $preco = $_POST['preco'];
-    $descricao = $_POST['descricao'];
-
-    $sql = "INSERT INTO produtos (image_url, nome, preco, descricao) 
-            VALUES (:image_url, :nome, :preco, :descricao)";
-
-    $stmt = $pdo->prepare($sql);
-
-    $stmt->bindParam(":image_url", $image_url);
-    $stmt->bindParam(":nome", $nome);
-    $stmt->bindParam(":preco", $preco);
-    $stmt->bindParam(":descricao", $descricao);
-
-    $stmt->execute();
-
-    header("Location: /Projeto-DesenvWeb/produtos");
-    exit;
 }

@@ -35,7 +35,7 @@ function getStatusBadge($id) {
         <ul>
             <li><a href="#" class="active"><i class="fas fa-home"></i> Dashboard</a></li>
             <li><a href="#"><i class="fas fa-users"></i> Usuários</a></li>
-            <li><a href="#"><i class="fas fa-car"></i> Produtos</a></li>
+            <li><a href="/Projeto-DesenvWeb/produtos/cadastrar"><i class="fas fa-car"></i> Produtos</a></li>
             <li><a href="#"><i class="fas fa-sign-out-alt"></i> Sair</a></li>
         </ul>
     </aside>
